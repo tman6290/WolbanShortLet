@@ -3,29 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wolban Short Let- About Us</title>
-    <link rel="stylesheet" href="main.css">
+    <title>Wolban Short Let - About Us</title>
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- External Custom CSS -->
+    <link rel="stylesheet" href="main.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    
+
+    <!-- Navbar Placeholder -->
+    <div id="navbar"></div>
+
+    <!-- About Us Section -->
+    <section class="about-us-section py-5">
+        <div class="container">
+            <!-- Introduction -->
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                    <br>
+                    <h1 class="display-4 mb-4">About Wolban Short Lets</h1>
+                    <p class="lead">At Wolban Short Lets, we believe that every stay should feel like a second home. Whether you're here for a few days or a few weeks, our comfortable and luxurious apartments are designed to make your experience unforgettable.</p>
+                </div>
+            </div>
+
+            <!-- Video and Content -->
+            <div class="row align-items-center mt-5">
+                <!-- Left Column: Video -->
+                <div class="col-lg-6 col-md-6 position-relative">
+                    <div class="video-wrapper">
+                        <video id="aboutUsVideo" class="img-fluid rounded shadow" poster="media/about-us-poster.jpg">
+                            <source src="media/AboutUsVid.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="play-button" id="playButton">
+                            <i class="fas fa-play fa-3x"></i>
+                        </div>
+                    </div>
+                </div>
+                <!-- Right Column: Text Content -->
+                <div class="col-lg-6 col-md-6 mt-4 mt-md-0">
+                    <h2>Our Story</h2>
+                    <p>Founded with a passion for hospitality, Wolban Short Lets started with a mission to offer guests a warm and inviting atmosphere where they can feel at home, even while traveling. From our Vintage-styled apartments to our modern, Contemporary spaces, we strive to provide accommodations that are not just practical, but also beautiful.</p>
+                    <h2>Why Choose Us?</h2>
+                    <ul>
+                        <li>High-quality, fully furnished apartments</li>
+                        <li>Friendly and professional customer service</li>
+                        <li>Flexible short-term rental options to suit your needs</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values-section bg-light py-5">
+        <div class="container text-center">
+            <h2>Our Values</h2>
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <div class="value-box">
+                        <i class="fas fa-handshake fa-3x mb-3"></i>
+                        <h3>Integrity</h3>
+                        <p>We believe in being transparent and honest in everything we do, ensuring that our guests always feel valued and respected.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="value-box">
+                        <i class="fas fa-heart fa-3x mb-3"></i>
+                        <h3>Hospitality</h3>
+                        <p>Hospitality is at the core of our business. We ensure that every guest receives the care and attention they deserve.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="value-box">
+                        <i class="fas fa-thumbs-up fa-3x mb-3"></i>
+                        <h3>Quality</h3>
+                        <p>Our apartments are meticulously maintained to provide the highest standard of comfort and style for every guest.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Placeholder -->
+    <div id="footer"></div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Navbar and Footer loading scripts -->
+    <script>
+        // Fetch and load the navbar.html content into the #navbar div
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+                window.onscroll = function() {
+                    var navbar = document.getElementById("navbar");
+                    if (window.pageYOffset > 50) {
+                        navbar.classList.add("sticky-navbar");
+                    } else {
+                        navbar.classList.remove("sticky-navbar");
+                    }
+                };
+            });
+
+        // Fetch and load the footer.html content into the #footer div
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+
+        // Video play functionality
+        document.getElementById('playButton').addEventListener('click', function() {
+            var video = document.getElementById('aboutUsVideo');
+            var playButton = document.getElementById('playButton');
+            video.play();
+            playButton.style.display = 'none'; // Hide play button once the video starts playing
+        });
+    </script>
 </body>
-<footer>
-    <div class="footer-content">
-        <div class="address">
-            <p>1 Akin Lakanu close, Adeniyi Jones<br>
-            Ikeja, Lagos, Nigeria</p>
-            <p>Phone: +123 456 7890</p>
-            <p>Email: info@shortletbusiness.com</p>
-        </div>
-        <div class="social-links">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-        </div>
-        <div class="copyright">
-            <p>&copy; 2024 Wolban Short Let. All rights reserved.</p>
-        </div>
-    </div>
-</footer>
 </html>

@@ -3,30 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wolban Short Let- Contemporary</title>
-    <link rel="stylesheet" href="main.css">
+    <title>Wolban Short Let - Contemporary</title>
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- External Custom CSS -->
+    <link rel="stylesheet" href="main.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    
-</body>
 
-<footer>
-    <div class="footer-content">
-        <div class="address">
-            <p>1 Akin Lakanu close, Adeniyi Jones<br>
-            Ikeja, Lagos, Nigeria</p>
-            <p>Phone: +123 456 7890</p>
-            <p>Email: info@shortletbusiness.com</p>
+    <div id="navbar"></div>
+
+    <!-- Main Article Section -->
+    <section class="apartment-main">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Left Column: Text Content -->
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <h1>Contemporary Apartment</h1>
+                    <p>Our Contemporary Apartment provides a sleek and stylish escape, characterized by clean lines, minimalist design, and modern aesthetics. Every detail is carefully considered, from the chic furniture to the state-of-the-art appliances, ensuring a fresh and vibrant atmosphere. Whether you're in town for business or leisure, our Contemporary Apartment offers a seamless blend of comfort and sophistication, designed for the modern traveler.</p>
+                </div>
+                <!-- Right Column: Image -->
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <img src="media/MainContemporaryPic.jpg" alt="Contemporary Apartment" class="main-image img-fluid">
+                </div>
+            </div>
         </div>
-        <div class="social-links">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
+    </section>
+
+    <!-- Additional Images Section -->
+    <section class="additional-images">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-4">
+                    <img src="media/contemporary1.jpg" alt="Contemporary corridor" class="extra-image img-fluid">
+                </div>
+                <div class="col-md-4">
+                    <img src="media/contemporary2.jpg" alt="Contemporary kitchen" class="extra-image img-fluid">
+                </div>
+                <div class="col-md-4">
+                    <img src="media/contemporary3.jpg" alt="Contemporary dinning space" class="extra-image img-fluid">
+                </div>
+            </div>
         </div>
-        <div class="copyright">
-            <p>&copy; 2024 Wolban Short Let. All rights reserved.</p>
-        </div>
-    </div>
-</footer>
+    </section>
+
+    <!-- Placeholder for Footer -->
+    <div id="footer"></div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Navbar and Footer loading scripts -->
+    <script>
+        // Fetch and load the navbar.html content into the #navbar div
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+                // Attach the sticky navbar behavior AFTER the navbar is loaded
+                window.onscroll = function() {
+                    var navbar = document.getElementById("navbar");
+                    if (window.pageYOffset > 50) {
+                        navbar.classList.add("sticky-navbar");
+                    } else {
+                        navbar.classList.remove("sticky-navbar");
+                    }
+                };
+            });
+
+        // Fetch and load the footer.html content into the #footer div
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+    </script>
+</body>
 </html>

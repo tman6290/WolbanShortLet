@@ -14,12 +14,12 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 9999; /* Ensure it stays on top of everything */
+    z-index: 9999;
     transition: background-color 0.3s ease;
 }
 
 .sticky-navbar {
-    background-color: rgba(0, 0, 0, 0.8); /* Background on scroll */
+    background-color: rgba(0, 0, 0, 0.8);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
@@ -27,57 +27,54 @@ body {
 .navbar-nav .nav-link {
     color: white;
     margin-right: 20px;
-    transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition for color and background change */
-    padding: 10px 15px; /* Add padding for better click area */
+    transition: color 0.3s ease, background-color 0.3s ease;
+    padding: 10px 15px;
 }
 
 .navbar-nav .nav-link:hover {
-    background-color: #a0522d; /* Brown background on hover */
-    color: black; /* Turn text black on hover */
+    background-color: #a0522d;
+    color: black;
 }
 
 /* Dropdown Menu Styling */
 .navbar-custom .dropdown-menu {
-    background-color: #a0522d; /* Brown background for dropdown */
-    border: none; /* Remove the default border */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add subtle shadow */
+    background-color: #a0522d;
+    border: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Dropdown Item Hover */
 .navbar-custom .dropdown-item {
-    color: white; /* Default color for dropdown items */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
-    padding: 10px 15px; /* Padding for better click area */
+    color: white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 10px 15px;
 }
 
 .navbar-custom .dropdown-item:hover {
-    background-color: black; /* Background turns black on hover */
-    color: white; /* Text remains white on hover */
+    background-color: black;
+    color: white;
 }
 
-/* Ensure the dropdown arrow remains white */
-.dropdown-toggle::after {
-    color: white;
+/* Change the color of the hamburger icon */
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
 /* Fullscreen Carousel */
 .carousel {
     position: relative;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 100vh; /* Full height */
+    height: 100vh;
     overflow: hidden;
 }
 
 .carousel-item {
-    height: 100vh; /* Ensure the carousel takes the full height of the viewport */
+    height: 100vh;
 }
 
 .carousel-item img {
-    object-fit: cover; /* Ensure images cover the whole area */
-    height: 100%; /* Full height */
-    width: 100%; /* Full width */
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
 }
 
 /* Content Overlay on Carousel */
@@ -88,7 +85,6 @@ body {
     width: 100%;
     height: 100vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -107,6 +103,7 @@ body {
     margin-bottom: 20px;
 }
 
+/* Apartment Types */
 .apartment-types {
     text-align: center;
     padding: 40px 20px;
@@ -118,7 +115,6 @@ body {
     color: white;
 }
 
-/* Grid Styles */
 .apartment-grid {
     display: flex;
     justify-content: center;
@@ -126,28 +122,26 @@ body {
     gap: 20px;
 }
 
-/* Individual Apartment Item Styles */
 .apartment-item {
     position: relative;
     width: 45%;
-    max-width: 400px; /* Adjust width to match your layout */
+    max-width: 400px;
     overflow: hidden;
     border-radius: 10px;
-    transition: transform 0.3s ease; /* Smooth transition for zoom effect */
+    transition: transform 0.3s ease;
 }
 
 .apartment-item img {
     width: 100%;
     height: auto;
     border-radius: 10px;
-    transition: transform 0.3s ease; /* Zoom effect on hover */
+    transition: transform 0.3s ease;
 }
 
 .apartment-item:hover img {
-    transform: scale(1.1); /* Zoom effect */
+    transform: scale(1.1);
 }
 
-/* Overlay Styles */
 .overlay {
     position: absolute;
     bottom: 0;
@@ -159,20 +153,14 @@ body {
     padding: 20px;
     transition: background-color 0.3s ease;
     border-radius: 0 0 10px 10px;
-    text-decoration: none; /* Remove underline from the link */
 }
 
 .overlay h3 {
     margin: 0;
 }
 
-/* Hover Effect for Overlay */
 .apartment-item:hover .overlay {
-    background-color: #a0522d; /* Brown background on hover */
-}
-
-.apartment-item:hover .overlay h3 {
-    color: white; /* White text on hover */
+    background-color: #a0522d;
 }
 
 /* Footer Styling */
@@ -181,4 +169,164 @@ footer {
     color: #fff;
     padding: 40px 0;
     text-align: center;
+}
+
+/* Main Section */
+.apartment-main {
+    padding: 50px 0;
+    background-color: #121212;
+}
+
+.apartment-main .main-image {
+    border-radius: 10px;
+}
+
+/* Add keyframe animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply the animation to the main image */
+.apartment-main .main-image {
+    border-radius: 10px;
+    animation: fadeInUp 1s ease-in-out forwards; /* Fade in and move up animation */
+    opacity: 0; /* Start hidden */
+}
+
+/* Text Styles */
+.apartment-main h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.apartment-main p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Additional Images Section */
+.additional-images {
+    padding: 50px 0;
+    background-color: #121212;
+    text-align: center;
+}
+
+.extra-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .apartment-main .main-image {
+        margin-bottom: 30px;
+    }
+
+    .apartment-main h1 {
+        font-size: 2rem;
+    }
+
+    .apartment-main p {
+        font-size: 1rem;
+    }
+
+    .extra-image {
+        width: 90%;
+        margin: 0 auto 30px;
+    }
+}
+
+/* About Us Section */
+.about-us-section {
+    background-color: #121212;
+    color: white;
+}
+
+.about-us-section h1, .about-us-section h2 {
+    font-weight: 700;
+}
+
+.about-us-section .lead {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+/* Video Wrapper */
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 aspect ratio */
+}
+
+.video-wrapper video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    padding: 20px;
+    z-index: 2;
+    transition: background-color 0.3s;
+}
+
+.play-button:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Values Section */
+.values-section {
+    background-color: #f8f9fa; /* Light background */
+}
+
+.value-box {
+    padding: 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.value-box i {
+    color: #a0522d; /* Icon color */
+}
+
+.values-section h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333; /* Dark gray color to create contrast with the light background */
+    margin-bottom: 40px;
+}
+
+.value-box h3 {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333; /* Changed text color to dark gray for visibility */
+}
+
+.value-box p {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #555; /* Changed text color to a darker gray for better contrast */
 }
