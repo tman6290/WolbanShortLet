@@ -1,37 +1,60 @@
-<nav id="navbar" class="navbar navbar-expand-lg navbar-custom">
-    <div class="container">
-        <a class="navbar-brand" href="#">Wolban Short Lets</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav ms-auto">
-                <!-- Home Link -->
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                
-                <!-- About Us Link -->
-                <li class="nav-item">
-                    <a class="nav-link" href="about.html">About Us</a>
-                </li>
-                
-                <!-- Dropdown for Apartments -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Apartments
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="vintage.html">Vintage</a></li>
-                        <li><a class="dropdown-item" href="contemporary.html">Contemporary</a></li>
-                    </ul>
-                </li>
+<!-- navbar.html — loaded dynamically into every page -->
+<nav class="navbar navbar-expand-lg navbar-custom" role="navigation" aria-label="Main navigation">
+  <div class="container">
 
-                <!-- Contact Us Link -->
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact Us</a>
-                </li>
-            </ul>
-        </div>
+    <!-- Brand -->
+    <a class="navbar-brand-wolban" href="index.html" aria-label="Wolban Short Lets Home">
+      <span class="nb-name">Wolban Short Lets</span>
+      <span class="nb-sub">Lagos · Nigeria</span>
+    </a>
+
+    <!-- Toggler (mobile) -->
+    <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNav"
+            aria-controls="mainNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Links -->
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About Us</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle"
+             href="#"
+             id="aptDropdown"
+             role="button"
+             data-bs-toggle="dropdown"
+             aria-expanded="false">
+            Apartments
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="aptDropdown">
+            <li><a class="dropdown-item" href="vintage.html">
+              <i class="fas fa-couch me-2 opacity-50"></i>Vintage
+            </a></li>
+            <li><a class="dropdown-item" href="contemporary.html">
+              <i class="fas fa-building me-2 opacity-50"></i>Contemporary
+            </a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link nav-cta" href="contact.html">Book Now</a>
+        </li>
+
+      </ul>
     </div>
+
+  </div>
 </nav>

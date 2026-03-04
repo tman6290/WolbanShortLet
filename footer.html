@@ -1,17 +1,56 @@
-<footer>
-    <div class="footer-content">
-        <div class="address">
-            <p>1 Akin Lakanu close, Adeniyi Jones<br>
-            Ikeja, Lagos, Nigeria, 101245</p>
-            <p>Call: <a href="tel:+2348033003352">+2348033003352</a></p>
-            <p>Email: <a href="mailto: shortlet@wolbantravels.com">shortlet@wolbantravels.com</a></p>
+<!-- footer.html — loaded dynamically into every page -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="row g-5">
+
+      <!-- Brand column -->
+      <div class="col-lg-4 col-md-6">
+        <div class="footer-brand">
+          <span class="f-name">Wolban Short Lets</span>
+          <span class="f-sub">Lagos · Nigeria</span>
+          <p>Luxury short-let apartments in the heart of Ikeja — because every stay should feel like home.</p>
         </div>
-        <div class="social-links">
-            <a href="https://m.facebook.com/WolbanTravelsandTours/?locale=ro_RO"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/wolbantravels"><i class="fab fa-instagram"></i></a>
-        </div>
-        <div class="copyright">
-            <p>&copy; 2024 Wolban Short Let. All rights reserved.</p>
-        </div>
+        <!-- Social icons — populated after load -->
+        <div class="f-social" id="footer-social-icons" aria-label="Social media links"></div>
+      </div>
+
+      <!-- Quick links -->
+      <div class="col-lg-2 col-md-6 col-sm-6">
+        <p class="f-heading">Quick Links</p>
+        <nav class="f-links" aria-label="Footer navigation">
+          <a href="index.html"><i class="fas fa-chevron-right"></i>Home</a>
+          <a href="about.html"><i class="fas fa-chevron-right"></i>About Us</a>
+          <a href="vintage.html"><i class="fas fa-chevron-right"></i>Vintage Apt.</a>
+          <a href="contemporary.html"><i class="fas fa-chevron-right"></i>Contemporary Apt.</a>
+          <a href="contact.html"><i class="fas fa-chevron-right"></i>Contact / Book</a>
+        </nav>
+      </div>
+
+      <!-- Apartments -->
+      <div class="col-lg-2 col-md-6 col-sm-6">
+        <p class="f-heading">Apartments</p>
+        <nav class="f-links" aria-label="Apartments navigation">
+          <a href="vintage.html"><i class="fas fa-chevron-right"></i>Vintage Style</a>
+          <a href="contemporary.html"><i class="fas fa-chevron-right"></i>Contemporary</a>
+          <a href="contact.html"><i class="fas fa-chevron-right"></i>Book a Stay</a>
+        </nav>
+      </div>
+
+      <!-- Contact injected by JS via SITE_CONFIG -->
+      <div class="col-lg-4 col-md-6" id="footer-contact-col">
+        <p class="f-heading">Get In Touch</p>
+      </div>
+
+    </div><!-- /row -->
+
+    <hr class="f-divider">
+
+    <div class="f-bottom">
+      <span id="footer-copyright"></span>
+      <span>Designed with <i class="fas fa-heart text-gold"></i> for Wolban</span>
     </div>
+
+  </div><!-- /container -->
 </footer>
+
+
