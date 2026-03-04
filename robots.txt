@@ -1,8 +1,8 @@
-# robots.txt — Wolban Short Lets
-# https://www.wolbanshortlets.com/robots.txt
+﻿# robots.txt — Wolban Short Lets
+# https://www.wolbantravels.com/robots.txt
 
 User-agent: *
 Allow: /
 
 # Point crawlers to the sitemap
-Sitemap: https://www.wolbanshortlets.com/sitemap.xml
+Sitemap: https://www.wolbantravels.com/sitemap.xml
