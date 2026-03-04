@@ -6,10 +6,10 @@
 /* ── 1. CSS Custom Properties (Design Tokens) ─────────────── */
 :root {
   /* Backgrounds */
-  --bg-base:     #0A0A0A;
-  --bg-surface:  #131313;
-  --bg-elevated: #1C1C1C;
-  --bg-card:     #181818;
+  --bg-base:     #161616;
+  --bg-surface:  #1E1E1E;
+  --bg-elevated: #272727;
+  --bg-card:     #222222;
 
   /* Brand accent — champagne gold */
   --gold:        #C9A870;
@@ -27,8 +27,8 @@
   --border-strong: rgba(201, 168, 112, 0.35);
 
   /* Overlays */
-  --overlay-dark:  rgba(10, 10, 10, 0.72);
-  --overlay-hero:  rgba(10, 10, 10, 0.55);
+  --overlay-dark:  rgba(10, 10, 10, 0.55);
+  --overlay-hero:  rgba(10, 10, 10, 0.38);
 
   /* Typography */
   --font-heading: 'Playfair Display', Georgia, serif;
@@ -237,7 +237,7 @@ ul { list-style: none; }
   z-index: 9999;
   display: flex;
   align-items: center;
-  background: linear-gradient(180deg, rgba(10,10,10,0.92) 0%, rgba(10,10,10,0.75) 100%);
+  background: linear-gradient(180deg, rgba(22,22,22,0.88) 0%, rgba(22,22,22,0.65) 100%);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border);
@@ -245,7 +245,7 @@ ul { list-style: none; }
               border-color var(--transition-base);
 }
 .navbar-custom.scrolled {
-  background: rgba(10,10,10,0.97);
+  background: rgba(22,22,22,0.97);
   box-shadow: 0 4px 40px rgba(0,0,0,0.6);
   border-bottom-color: var(--border-strong);
 }
@@ -303,7 +303,7 @@ ul { list-style: none; }
 .navbar-nav .nav-link.active::after { width: 55%; }
 
 .navbar-custom .dropdown-menu {
-  background: #1A1A1A;
+  background: #272727;
   border: 1px solid var(--border-strong);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-lg);
@@ -368,7 +368,7 @@ ul { list-style: none; }
   height: 100%;
   object-fit: cover;
   object-position: center;
-  filter: brightness(0.55);
+  filter: brightness(0.72);
 }
 
 /* Overlay content */
@@ -382,7 +382,7 @@ ul { list-style: none; }
   justify-content: center;
   text-align: center;
   padding: var(--navbar-h) 1.5rem 2rem;  /* top offset = navbar height */
-  background: linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.3) 100%);
+  background: linear-gradient(180deg, rgba(0,0,0,0.08) 0%, rgba(0,0,0,0.18) 100%);
 }
 
 .hero-content .badge-gold {
